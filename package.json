@@ -6,18 +6,19 @@
   "repository": "https://github.com/murielg/reactstarter.git",
   "author": "Muriel Gonzalez <murielgonzalez@gmail.com>",
   "config": {
-    "theme": "app"
+    "theme": "src", 
+    "build": "build"
   },
   "license": "MIT",
   "scripts": {
     "start": "parallelshell 'npm run live-server' 'npm run watch'",
-    "live-server": "live-server --open=app/",
+    "live-server": "live-server --open=$npm_package_config_build/",
     "build": "npm run build:css & npm run build:js",
     "watch": "npm run watch:css & npm run watch:js",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
-    "build:css": "node-sass $npm_package_config_theme/css/scss/style.scss --output-style compressed >  $npm_package_config_theme/css/style.css",
-    "watch:js": "watchify $npm_package_config_theme/js/index.js -t [ babelify --presets [ es2015 react ] ] -o $npm_package_config_theme/js/bundle.js",
-    "build:js": "browserify $npm_package_config_theme/js/index.js -t [ babelify --presets [ es2015 react ] ] -o $npm_package_config_theme/js/bundle.js"
+    "build:css": "node-sass $npm_package_config_theme/scss/style.scss --output-style compressed >  $npm_package_config_build/style.css",
+    "watch:js": "watchify $npm_package_config_theme/index.js -t [ babelify --presets [ es2015 react ] ] -o $npm_package_config_build/bundle.js",
+    "build:js": "browserify $npm_package_config_theme/index.js -t [ babelify --presets [ es2015 react ] ] -o $npm_package_config_build/bundle.js"
   },
   "dependencies": {
     "jquery": "^3.2.1",
