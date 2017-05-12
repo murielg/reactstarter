@@ -1,8 +1,19 @@
-# reactstarter
+## Yet another react starter kit, but this one works for me.
 
 This will be used as my starting point when working on React JS + Flux projects.
 
-## Installation
+### Things you'll need
 
-`npm install` followed by `npm run watch` should get you going.
+- node.js (nvm is highly recommended)
 
+- npm
+
+- yarn
+
+### You know what to do
+
+- Install dependencies with ` yarn install `
+
+- Watch and develop with ` npm start `
+
+- Build with `npm run build`
