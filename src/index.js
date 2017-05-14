@@ -2,28 +2,16 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Button from './components/button';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-class App extends Component {
+import App from './components/app';
+import reducers from './reducers';
 
-  constructor(props) {
-    super(props);
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-    this.state = {
-    
-    };
-  }
-  
- render() {
-   return (
-     <div>
-       <h1>Hello World!</h1>
-        <Button 
-          title="Tap Here!"
-        />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>
+  , document.querySelector('.container'));
