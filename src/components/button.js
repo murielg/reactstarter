@@ -1,12 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-class Button extends React.Component {
- render() {
-    return <button onClick={this.props.whenClicked} className={"btn " + this.props.className} >
-      {this.props.title}
-      <span className={this.props.subTitleClassName}>{this.props.subTitle}</span>
-    </button>
+import React, { Component } from 'react';
+
+class Button extends Component {  
+  render () {
+    return (
+      <button>{this.props.title}</button>
+    );
   }
-}
+};
 
 export default Button;

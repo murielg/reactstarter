@@ -1,19 +1,29 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import _ from 'lodash';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 import Button from './components/button';
 
-class Hello extends React.Component {
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+    
+    };
+  }
+  
  render() {
-    return <div>
-      <h1>Hello World!</h1>
-      <Button 
-        className="btn-default"
-        title="Tap Here!"
-      />
-    </div>
+   return (
+     <div>
+       <h1>Hello World!</h1>
+        <Button 
+          title="Tap Here!"
+        />
+      </div>
+    );
   }
 }
 
-var element = React.createElement(Hello, {});
-ReactDOM.render(element, document.querySelector('.container'));
-
+ReactDOM.render(<App />, document.querySelector('.container'));
