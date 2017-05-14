@@ -1,6 +1,6 @@
 ## Yet another react starter kit, but this one works for me.
 
-This will be used as my starting point when working on React JS + Flux projects.
+This will be used as my starting point when working on React + Redux projects.
 
 ### Things you'll need
 
