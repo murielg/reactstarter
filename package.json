@@ -6,7 +6,7 @@
   "repository": "https://github.com/murielg/reactstarter.git",
   "author": "Muriel Gonzalez <murielgonzalez@gmail.com>",
   "config": {
-    "theme": "src", 
+    "theme": "src",
     "build": "build"
   },
   "license": "MIT",
@@ -17,13 +17,17 @@
     "watch": "npm run watch:css & npm run watch:js",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "build:css": "node-sass $npm_package_config_theme/scss/style.scss --output-style compressed >  $npm_package_config_build/style.css",
-    "watch:js": "watchify $npm_package_config_theme/index.js -t [ babelify --presets [ es2015 react ] ] -o $npm_package_config_build/bundle.js",
-    "build:js": "browserify $npm_package_config_theme/index.js -t [ babelify --presets [ es2015 react ] ] -o $npm_package_config_build/bundle.js"
+    "watch:js": "watchify $npm_package_config_theme/index.js -t [ babelify --presets [ react es2015 stage-1 ] ] -o $npm_package_config_build/bundle.js",
+    "build:js": "browserify $npm_package_config_theme/index.js -t [ babelify --presets [ react es2015 stage-1 ] ] -o $npm_package_config_build/bundle.js"
   },
   "dependencies": {
+    "babel-preset-stage-1": "^6.24.1",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
