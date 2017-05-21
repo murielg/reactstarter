@@ -1,18 +1,17 @@
 ## Yet another react starter kit, but this one works for me.
 
-This will be used as my starting point when working on React + Redux projects. 
+This will be used as my starting point when working on React + Redux projects. The starter kit features:
 
-#### TO DO
-
-- [ ] Code Splitting
-
-- [ ] CSS Modules
-
-- [ ] Proper Asset Management
+- React
+- Redux
+- React Router
+- Webpack 2
+- Babel
+- SCSS
 
 ### Things you'll need
 
-- node.js (nvm is highly recommended)
+- node.js + nvm
 
 - npm
 
@@ -22,6 +21,17 @@ This will be used as my starting point when working on React + Redux projects.
 
 - Install dependencies with ` yarn install `
 
-- Watch and develop with ` npm start `
+- Develop with ` npm start `
 
-- Build with `npm run build`
+### TODO
+
+- [ ] Separate into Dev and Production
+
+- [ ] Add Hot Module Replacement
+
+- [ ] Lint
+
+- [ ] CSS Autoprefixing
+
+- [ ] Testing with Mocha and Chai
+
