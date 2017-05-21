@@ -53,9 +53,24 @@ module.exports = {
     extensions: ['.js'],
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
+  plugins, 
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: 'sourcePath',
+    stats: {
+      assets: true,
+      children: false,
+      chunks: false,
+      hash: false,
+      modules: false,
+      publicPath: false,
+      timings: true,
+      version: false,
+      warnings: true,
+      colors: {
+        green: '\u001b[32m',
+      },
+    }
   }
 
 }
