@@ -1,3 +1,13 @@
+# Deprecated
+
+This project  old and is no longer mantained or worked on. 
+
+To create a react app, it is recommended to use `npx create-react-app my-appp` 
+
+Go here to learn more about the  [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)
+
+---
+
 ## Yet another react starter kit, but this one works for me.
 
 This will be used as my starting point when working on React + Redux projects. The starter kit features:
